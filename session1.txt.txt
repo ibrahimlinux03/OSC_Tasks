@@ -1,0 +1,47 @@
+session1.txt
+
+step1:
+1.mkdir "ibrahim ehsan"
+2.cd "ibrahim ehsan"
+
+step2:
+1.mkdir Documents
+2.cd Documents
+3.touch file1.txt file2.txt file3.txt
+4.ls
+
+step3:
+1.cd ..
+2.touch .hidden file
+3.ls -a
+
+step4:
+1.nano file1.txt
+2.ctrl+o,enter,ctrl+x
+3.cat file1.txt
+
+step5:
+1.cd Documents
+
+step6:
+1.mkdir "a hyphen"
+2.cd "a hyphen"   i forget in picture
+
+step7:
+1. cd "ibrahim ehsan"
+2.cp -r Documents My_Document
+3.cd My_Document
+4. ls My_Document
+
+step8:
+1.cat .hidden_file
+
+step9:
+1.mv Documents/file1.txt Document/file2.txt My_Document/
+2.ls My_Document
+3.ls Documents
+
+step10:
+1.cd ~
+2.rm -r "ibrahim ehsan"
+3.ls "ibrahim ehsan"
