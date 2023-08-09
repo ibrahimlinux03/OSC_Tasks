@@ -24,7 +24,7 @@ step5:
 1.cd Documents
 
 step6:
-1.mkdir "-"
+1.mkdir "-" this step is wrong in picture
 2.cd ./-  i forget in picture
 
 step7:
