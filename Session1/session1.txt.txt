@@ -24,8 +24,8 @@ step5:
 1.cd Documents
 
 step6:
-1.mkdir "a hyphen"
-2.cd "a hyphen"   i forget in picture
+1.mkdir "-"
+2.cd ./-  i forget in picture
 
 step7:
 1. cd "ibrahim ehsan"
