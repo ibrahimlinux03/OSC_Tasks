@@ -1,1 +1,95 @@
 
+─$ ls
+Updated-Task-02.zip
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads]
+└─$ unzip Updated-Task-02.zip   
+Archive:  Updated-Task-02.zip
+   creating: Updated-Task-02/
+  inflating: Updated-Task-02/README.txt  
+  inflating: Updated-Task-02/.level-1.tar  
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads]
+└─$ tar -xvf Updated-Task-02/.level-1.tar
+.level-1/
+.level-1/README.txt
+.level-1/level-2
+tar: .level-1/level-2: Cannot open: File exists
+tar: Exiting with failure status due to previous errors
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads]
+└─$ cd .level-1                          
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1]
+└─$ ls
+level-2  README.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1]
+└─$ cat README.txt 
+Decompress "level-2".
+Hint: Most compression tools require it's suffix.
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1]
+└─$ tar -xvf level-2                     
+tar: level-2: Cannot read: Is a directory
+tar: At beginning of tape, quitting now
+tar: Error is not recoverable: exiting now
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1]
+└─$ file level-2           
+level-2: directory
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1]
+└─$ cd level-2    
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ tar -xvzf level-2
+tar (child): level-2: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ ls
+ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ cat README.txt 
+Locate "level-3".
+Use a general method to decompress it.
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ find . -name "*level-3"
+./WgfRbtOwEK/level-3
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ file ./WgfRbtOwEK/level-3
+
+./WgfRbtOwEK/level-3: directory
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Downloads/.level-1/level-2]
+└─$ cd ./WgfRbtOwEK/level-3
+
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/…/.level-1/level-2/WgfRbtOwEK/level-3]
+└─$ cat README.txt         
+You're seeking a file with a certain size.
+Find the link to get the size.
+
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/…/.level-1/level-2/WgfRbtOwEK/level-3]
+└─$ ls
+00aBxtql7r  6AJpxbHYkm  9my7brVWmo  cKiyNtE0yD  F5Db7l8s9j  HXq7gqQZ5Z  jrMKucOmtp  m59pSiQG2p  o6Q2i1NUXc  q4gh4nODZa  sVyNLUXzut  WhTtCYas3M  YgeyHmPrtP
+0aba2tPi4R  6C8RwQ9kGP  9NNnGuH7A1  ClbTpohwVU  F9OYJjkGiB  i4CkeVfT7S 
+─(ibrahim03㉿kali)-[~/…/.level-1/level-2/WgfRbtOwEK/level-3]
+└─$ find -size 73c              
+./m7lRDpRTUJ/xVMvVOKNW5
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/…/.level-1/level-2/WgfRbtOwEK/level-3]
+└─$ cat m7lRDpRTUJ 
+cat: m7lRDpRTUJ: Is a directory
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/…/.level-1/level-2/WgfRbtOwEK/level-3]
+└─$ cd m7lRDpRTUJ          
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/…/level-2/WgfRbtOwEK/level-3/m7lRDpRTUJ]
+└─$ cat xVMvVOKNW5 
+Congrats!! You have finished the Task Successfully, you can rest now :D.
