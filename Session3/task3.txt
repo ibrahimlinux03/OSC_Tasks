@@ -1,1 +1,66 @@
+STEP1:
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo useradd osc             
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo passwd osc              
+New password: 
+Retype new password: 
+passwd: password updated successfully
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo groupadd osc-group      
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo usermod -aG  osc-group  osc
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo usermod -aG  sudo  osc     
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sudo su osc                
+$ sudo -s
+[sudo] password for osc: 
+STEP2:
+# sudo mkdir permission_practice
+# cd permission_practice
+# touch public_file.txt
+# touch private_file.txt
+# touch executable_file.sh
+# chmod 666 public_file.txt
+# chmod 600 private_file.txt
+# chmod 750 executable_file.sh
+STEP3:
+# sudo chown ibrahim03 private_file.txt
+# sudo chgrp osc-group private_file.txt
+# sudo su ibrahim03
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ ls -l
+
+STEP4:
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ sleep 1000& 
+[1] 10133
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ kill 10133 
+                                                                                                                                                                      
+[1]  + terminated  sleep 1000
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ vim 
+
+zsh: suspended  vim
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ kill -KILL %1
+[1]  + killed     vim                                                                                                                                                
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ ps -a       
+
+STEP5:
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ sudo apt-get install neofetch
+┌──(ibrahim03㉿kali)-[~/permission_practice]
+└─$ sudo apt-get remove  neofetch
+
 
