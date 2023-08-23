@@ -1,1 +1,92 @@
+┌──(ibrahim03㉿kali)-[~]
+└─$ cd Desktop             
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop]
+└─$ cd testfolder
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ls
+file1.txt  file_check.sh  system_info.sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ nano system_info.sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ chmod +x system_info.sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./system_info.sh                                              
+Username: ibrahim03
+Kernel Version: 6.1.0-kali9-amd64
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ nano file_check.sh 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./file_check.sh file1.txt   /home/ibrahim03/Desktop/testfolder
+File exists
+Contents  of file1.txt :
+this is file1.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./file_check.sh file2.txt   /home/ibrahim03/Desktop/testfolder
+File does not exist
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ touch rename_file.sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ chmod +x rename_file.sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ touch lion.png tiger.png cat.jpg dog.jpg text.txt session1.pdf
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ls
+cat.jpg  dog.jpg  file1.txt  file_check.sh  lion.png  rename_file.sh  session1.pdf  system_info.sh  text.txt  tiger.png
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./rename_file.sh png image                                    
+zsh: ./rename_file.sh: bad interpreter: bin/bash: no such file or directory
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./rename_file.sh png image
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ls
+cat.jpg  dog.jpg  file1.txt  file_check.sh  image1.png  image2.png  rename_file.sh  session1.pdf  system_info.sh  text.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ touch calculator.sh                                           
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ chmod +x calculator.sh 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~/Desktop/testfolder]
+└─$ ./calculator.sh           
+1. Addition
+2. Subtraction
+3. Division
+4. Multiplication
+5. Exit
+Enter your choice: 1 
+Enter the first number: 10
+Enter the second number: 20
+10 + 20 = 30
+1. Addition
+2. Subtraction
+3. Division
+4. Multiplication
+5. Exit
+Enter your choice: 2
+Enter the first number: 10
+Enter the second number: 20
+10 - 20 = -10
+1. Addition
+2. Subtraction
+3. Division
+4. Multiplication
+5. Exit
+Enter your choice: 5
+Exiting...
 
