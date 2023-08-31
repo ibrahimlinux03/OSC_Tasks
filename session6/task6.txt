@@ -1,1 +1,155 @@
+─(ibrahim03㉿kali)-[~]
+└─$ cat /etc/shells        
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+/usr/bin/pwsh
+/opt/microsoft/powershell/7/pwsh
+/usr/bin/tmux
+/usr/bin/screen
+/bin/zsh
+/usr/bin/zsh
+/usr/bin/sh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ rev /etc/shells  |cut -d '/' -f 1 |rev | sort |uniq |tr ':' '='
+bash
+dash
+pwsh
+rbash
+screen
+sh
+shells= valid login shells
+tmux
+zsh
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch names         
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch ages 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano names        
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano ages 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ paste names ages
+ibrahim         20
+ahmed   19
+mohamed 15
+khaled  16
+ali     21
+mostafa 25
+omar
 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano ages       
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ paste names ages
+ibrahim         20
+ahmed   19
+mohamed 15
+khaled  16
+ali     21
+mostafa 25
+omar    18
+
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch email.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano email.txt 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ grep -E   '.+@.+\..{2,3}' emails.txt
+grep: emails.txt: No such file or directory
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ grep -E   '.+@.+\..{2,3}' email.txt 
+test@gmail.com
+ahmed.khaled.yousry@gmail.com
+correctemail@cis.asu.edu.eg
+c0rrec1@email.com
+another_working@somethingelse.org
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch discord.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano discord.txt 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ grep -E  '.+#([0-9]){4}$' discord.txt
+Ahmed#0101
+Salma#9882
+C0rrect000#1234
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch cards.txt  
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano cards.txt  
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ grep -E  '([0-9])\s?\1' cards.txt  
+1234 5678 9101 1234  
+2999 5178 9101 2234  
+9999 5628 9201 1232  
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch namesnotclean.txt
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano namesnotclean.txt 
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ sed 's/#.*//' namesnotclean.txt | sed 's/-.*//'
+
+
+Ahmed
+Mostafa
+Abdelrahman
+
+Badr 
+Omar
+
+Mohamed
+Salma 
+Abanob
+Nada
+
+Tony 
+Abdelrahman
+Mohamed
+Omar
+
+
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ touch names2           
+                                                                                                                                                                      
+┌──(ibrahim03㉿kali)-[~]
+└─$ nano  names2             
+                                                                                                                                       ──(ibrahim03㉿kali)-[~]
+└─$ awk '/^[A-Z]/{print  $NF}' names2
+Yousry
+Farahat
+Khatab
+Badr
+Mohamed
+Abdelraaof
+Omar
+Medhat
+Gamal
+                                                                                          
